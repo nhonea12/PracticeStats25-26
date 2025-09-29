@@ -240,6 +240,9 @@ practice_totals_with_team |>
   tab_style(style = list(cell_text(color = "#FFFFFF"),
                          cell_fill(color = "#000000")),
             locations = cells_body(rows = Name == "Team Totals")) |> 
+  tab_options(
+    table.width = pct(100)
+  ) |> 
   # make sure the AST/TO column isn't cut off
   cols_width(
     AST_TO_ratio ~ px(60)   # adjust px value until it fits
