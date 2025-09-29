@@ -228,14 +228,4 @@ practice_totals_with_team |>
   cols_width(
     AST_TO_ratio ~ px(60)   # adjust px value until it fits
   )
-
-
-tibble(
-  Player = c(practice_totals_with_team$Name[11], practice_totals_with_team$Name[12]),
-  Headshot = c(
-    practice_totals_with_team$Headshot[11], practice_totals_with_team$Headshot[12]
-  )
-) |>
-  gt() |>
-  gt_img_rows(columns = "Headshot", img_source = "web", height = 80)
 ```
