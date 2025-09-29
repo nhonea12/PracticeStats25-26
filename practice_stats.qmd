@@ -183,9 +183,6 @@ gt_theme_ncsu <- function(gt_object, ...) {
 #Save the url to a png of NC State's Logo as an object
 ncsuLogo.png <- "https://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/152.png&h=200&w=200" 
 
-
-practice_totals_with_team |> 
-select(Name, Headshot)
 # create table
 practice_totals_with_team |> 
   select(Headshot, Number, Name, FG, FGA, FG_per, FG3, FGA3, FG3_per, EFG_per, REB, OREB, AST, STL, TO, AST_TO_ratio) |> 
