@@ -65,11 +65,28 @@ practice_totals <- practice_totals |>
 
 
 # add player headshot urls to data
-practice_totals <- practice_totals |> 
-  mutate(Headshot = ifelse(Name == "Devyn Quigley", "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgopack.com%2Fimages%2F2024%2F9%2F25%2F0_Devyn_Quigley_5A5A0376_ljWsu.png&width=180&height=270&type=webp", ifelse(Name == "Lorena Awou", "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgopack.com%2Fimages%2F2025%2F9%2F23%2F1_Lorena_Awou_WBB_MEDIA_DAY_WB_25_SH-2353.png&width=180&height=270&type=webp", ifelse(Name == "Qadence Samuels", "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgopack.com%2Fimages%2F2025%2F9%2F22%2F2_Qadence_Samuels_WBB_MEDIA_DAY_WB_25_SH-2461.png&width=180&height=270&type=webp", ifelse(Name == "Zamareya Jones", "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgopack.com%2Fimages%2F2025%2F9%2F22%2F3_Zamareya_Jones_WBB_MEDIA_DAY_WB_25_SH-2602.png&width=180&height=270&type=webp", ifelse(Name == "Ky’She Lunan", "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgopack.com%2Fimages%2F2025%2F9%2F22%2F7_Ky_She_Lunan_WBB_MEDIA_DAY_WB_25_SH-1436.png&width=180&height=270&type=webp", ifelse(Name == "Adelaide Jernigan", "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgopack.com%2Fimages%2F2025%2F9%2F22%2F10_Adelaide_Jernigan_WBB_MEDIA_DAY_WB_25_SH-1862.png&width=180&height=270&type=webp", ifelse(Name == "Maddie Cox", "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgopack.com%2Fimages%2F2025%2F9%2F22%2F11_Maddie_Cox_WBB_MEDIA_DAY_WB_25_SH-2074.png&width=180&height=270&type=webp", ifelse(Name == "Khamil Pierre", "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgopack.com%2Fimages%2F2025%2F9%2F22%2F12_Khamil_Pierre_WBB_MEDIA_DAY_WB_25_SH-2251.png&width=180&height=270&type=webp", ifelse(Name == "Tilda Trygger", "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgopack.com%2Fimages%2F2025%2F9%2F22%2F18_Tilda_Trygger_WBB_MEDIA_DAY_WB_25_SH-1332.png&width=180&height=270&type=webp", ifelse(Name == "Zoe Brooks", "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgopack.com%2Fimages%2F2025%2F9%2F22%2F35_Zoe_Brooks_WBB_MEDIA_DAY_WB_25_SH-1692.png&width=180&height=270&type=webp", ifelse(Name == "Mallory Collier", "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgopack.com%2Fimages%2F2025%2F9%2F22%2F42_Mallory_Collier_WBB_MEDIA_DAY_WB_25_SH-1537.png&width=180&height=270&type=webp", ""))))))))))))
+#practice_totals <- practice_totals |> 
+ # mutate(Headshot = ifelse(Name == "Devyn Quigley", "NCSU player headshots/Devyn_Quigley_headshot.png", ifelse(Name == "Lorena Awou", "NCSU player headshots/Lorena_Awou_headshot.png", ifelse(Name == "Qadence Samuels", "NCSU player headshots/Qadence_Samuels_headshot.png", ifelse(Name == "Zamareya Jones", "NCSU player headshots/Zamareya_Jones_headshot.png", ifelse(Name == "Ky’She Lunan", "NCSU player headshots/KyShe_Lunan_headshot.png", ifelse(Name == "Adelaide Jernigan", "NCSU player headshots/Adelaide_Jernigan_headshot.png", ifelse(Name == "Maddie Cox", "NCSU player headshots/Maddie_Cox_headshot.png", ifelse(Name == "Khamil Pierre", "NCSU player headshots/Khamil_Pierre_headshot.png", ifelse(Name == "Tilda Trygger", "NCSU player headshots/Tilda_Trygger_headshot.png", ifelse(Name == "Zoe Brooks", "NCSU player headshots/Zoe_Brooks_headshot.png", ifelse(Name == "Mallory Collier", "NCSU player headshots/Mallory_Collier_headshot.png", ""))))))))))))
+
 
 practice_totals <- practice_totals |> 
-  mutate_all(~replace(., is.na(.), 0))
+  mutate(Headshot = case_when(
+  Name == "Devyn Quigley" ~ "NCSU player headshots/Devyn_Quigley_headshot.png",
+  Name == "Lorena Awou"   ~ "NCSU player headshots/Lorena_Awou_headshot.png",
+  Name == "Qadence Samuels" ~ "NCSU player headshots/Qadence_Samuels_headshot.png",
+  Name == "Zamareya Jones"  ~ "NCSU player headshots/Zamareya_Jones_headshot.png",
+  Name == "Ky’She Lunan"    ~ "NCSU player headshots/KyShe_Lunan_headshot.png",
+  Name == "Adelaide Jernigan" ~ "NCSU player headshots/Adelaide_Jernigan_headshot.png",
+  Name == "Maddie Cox"      ~ "NCSU player headshots/Maddie_Cox_headshot.png",
+  Name == "Khamil Pierre"   ~ "NCSU player headshots/Khamil_Pierre_headshot.png",
+  Name == "Tilda Trygger"   ~ "NCSU player headshots/Tilda_Trygger_headshot.png",
+  Name == "Zoe Brooks"      ~ "NCSU player headshots/Zoe_Brooks_headshot.png",
+  Name == "Mallory Collier" ~ "NCSU player headshots/Mallory_Collier_headshot.png",
+  TRUE ~ NA
+))
+
+practice_totals <- practice_totals |> 
+  mutate(across(where(is.numeric), ~replace(., is.na(.), 0)))
 
 # calculate totals for the entire team
 team_practice_totals <- practice_totals |> 
@@ -96,7 +113,7 @@ team_practice_totals <- practice_totals |>
     EFG_per = (FG + 0.5 * FG3) / FGA, 
     REB = sum(REB, na.rm = TRUE), 
     AST_TO_ratio = AST / TO, 
-    Headshot = ""
+    Headshot = "NCSU player headshots/NCSU_logo.png"
   )
 
 
@@ -195,7 +212,7 @@ practice_totals_with_team |>
   # turn into a nice gt table
   gt() |> 
   # add in headshot images
-  gt_img_rows(columns = "Headshot", img_source = "web", height = 80) |> 
+  gt_img_rows(columns = "Headshot", img_source = "local", height = 80) |> 
   # format column names
   cols_label(
     Headshot = "", 
